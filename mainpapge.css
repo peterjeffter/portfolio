@@ -1,0 +1,167 @@
+body{
+    background-color: black;
+    color: white;
+    margin: 0;
+    overflow: hidden;
+    
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: wheat;
+    border-bottom:solid 1px wheat ;
+    padding: 2%;
+}
+h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.role{
+    font-size: 17px;
+}
+.my-description{
+    width: 96vw;
+    position: absolute;
+    bottom: 10vh;
+    color: white;
+    font-size: 18px;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.right-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50px;
+}
+.right-section span:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.project-popup {
+    z-index: 100;
+    visibility: hidden; /* Initially hidden */
+    transform: translateY(100%); /* Start off-screen at the bottom */
+    transition: transform 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color:rgba(0, 0, 0, 0.664);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30% 0;
+    row-gap: 10px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .project-popup.active {
+    visibility: visible;
+    transform: translateY(0); /* Slide into view */
+  }
+  
+  
+.project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    height: fit-content;
+    min-height: 80px;
+    background-color: black;
+    color: white;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: white solid 1px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start a bit below the final position */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+h4{
+    margin: 0;
+}
+.project span{
+    font-size: 15px;
+    text-align: center;
+    width: 300px;
+}
+.link{
+    margin-top: 10px;
+}
+.project-popup.active .project {
+    animation: slideIn 0.4s ease-in-out forwards;
+    animation-delay: calc(0.3s * var(--i)); /* Delay based on the index */
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px); 
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); 
+    }
+  }
+  .connect-btn{
+    width: 100px;
+    font-size: 20px;
+    height: 50px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out;
+    background-color: green;
+    border: none;
+    color: whitesmoke;
+    border-radius: 10px;
+  }
+  .connect-btn1{
+    font-size: 15px;
+    height: 30px;
+    background-color: green;
+    border: none;
+    color: whitesmoke;
+    margin-top: 5%;
+  }
+  
+  /* Show button after all projects have appeared */
+  .project-popup.active .connect-btn {
+    opacity: 1;
+    transition-delay: 1.6s; /* Wait for all projects to finish animating */
+  }
+
+  @media (min-width: 500px){
+    .my-description{
+        width: 40vw;
+    
+    }
+    .project-popup{
+        padding: 25px 0;
+    }
+  }
+
+
+  .my-image{
+    width: 200px;
+    position: absolute;
+    right: 0;
+    bottom: 10vh;
+  }
+  @media (max-width: 500px){
+    .my-image{
+        top: 0;
+        left: 25.5vw;
+        align-self: center;
+    }
+  }
