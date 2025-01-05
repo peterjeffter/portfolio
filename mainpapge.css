@@ -25,7 +25,7 @@ h1{
 .my-description{
     width: 96vw;
     position: absolute;
-    bottom: 10vh;
+    bottom: 5vh;
     color: white;
     font-size: 18px;
     margin-left: 2%;
@@ -160,8 +160,8 @@ h4{
   }
   @media (max-width: 500px){
     .my-image{
-        top: 0;
+        top: 15vh;
         left: 25.5vw;
-        align-self: center;
+        
     }
   }
