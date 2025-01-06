@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     const mailtoURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
-    t
+    
     window.open(mailtoURL, '_blank');
   });
 
