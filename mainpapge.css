@@ -3,7 +3,10 @@ body{
     color: white;
     margin: 0;
     overflow: hidden;
-    
+    font-family: "Quicksand", serif;  
+    font-optical-sizing: auto;  
+    font-weight:200;  
+    font-style: normal;
 }
 header{
     display: flex;
@@ -26,7 +29,7 @@ h1{
     width: 96vw;
     position: absolute;
     bottom: 5vh;
-    color: white;
+    color: wheat;
     font-size: 18px;
     margin-left: 2%;
     margin-right: 2%;
@@ -80,11 +83,11 @@ h1{
     height: fit-content;
     min-height: 80px;
     background-color: black;
-    color: white;
+    color: rgb(221, 221, 221);
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: white solid 1px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: rgb(155, 145, 102) solid 1px;
     opacity: 0; /* Initially hidden */
     transform: translateY(20px); /* Start a bit below the final position */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -115,24 +118,18 @@ h4{
       transform: translateY(0); 
     }
   }
-  .connect-btn{
-    width: 100px;
-    font-size: 20px;
-    height: 50px;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.5s ease-in-out;
-    background-color: green;
-    border: none;
-    color: whitesmoke;
-    border-radius: 10px;
-  }
+  
   .connect-btn1{
     font-size: 15px;
     height: 30px;
-    background-color: green;
+    background-color: rgb(43, 70, 12);
     border: none;
     color: whitesmoke;
     margin-top: 5%;
+    color: rgba(247, 247, 247, 0.548);
+    width: 100px;
+    align-self: center;
+    border-radius: 15px;
   }
   
   /* Show button after all projects have appeared */
@@ -164,4 +161,30 @@ h4{
         left: 25.5vw;
         
     }
+  }
+  
+  .contact-popup{
+    background-color: rgba(0, 0, 0, 0.726);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    visibility: hidden;
+  }
+
+  .gmail, .whatsapp{
+    height: 50px;
+    border: none;
+    background-color: rgb(61, 85, 25);
+    color: white;
+    font-size: 18px;
+    margin-top: 15%;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .contactactive{
+    visibility: visible;
+    z-index: 100;
   }
