@@ -121,15 +121,12 @@ h4{
   
   .connect-btn1{
     font-size: 15px;
-    height: 30px;
-    background-color: rgb(43, 70, 12);
-    border: none;
     color: whitesmoke;
     margin-top: 5%;
     color: rgba(247, 247, 247, 0.548);
-    width: 100px;
+    text-decoration: underline;
     align-self: center;
-    border-radius: 15px;
+    cursor: pointer;
   }
   
   /* Show button after all projects have appeared */
